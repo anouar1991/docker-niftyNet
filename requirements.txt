@@ -1,0 +1,6 @@
+tensorflow
+niftynet
+scikit-image
+pyyaml
+opencv-python
+SimpleITK
