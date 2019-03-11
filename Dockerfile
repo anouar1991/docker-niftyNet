@@ -1,15 +1,6 @@
-FROM ubuntu:16.04
-
-RUN apt-get update \
-    && apt-get install -y python-pip build-essential \
-        && apt-get -y autoremove \
-	    && apt-get -y clean  \
-	        && rm -rf /var/lib/apt/lists/*
+FROM python:3.6
 USER root
-RUN pip install -U tensorflow &&\
-    pip install -U niftynet &&\
-    pip install -U scikit-image &&\
-    pip install -U pyyaml &&\
-    pip install -U opencv-python &&\
-    pip install -U SimpleITK
-    
+ADD requirements.txt ./requirements.txt
+RUN pip install -U  --no-cache-dir -r requirements.txt
+RUN apt update -y && apt install -y megatools
+RUN apt-get clean && apt-get autoremove --purge
