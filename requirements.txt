@@ -1,7 +1,11 @@
 pip
 tensorflow
+keras
 niftynet
 scikit-image
 pyyaml
 opencv-python
 SimpleITK
+scipy
+jupyter
+sklearn
