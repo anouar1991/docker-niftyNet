@@ -9,3 +9,8 @@ SimpleITK
 scipy
 jupyter
 sklearn
+pydot
+imageio
+graphviz
+pydot-ng
+
